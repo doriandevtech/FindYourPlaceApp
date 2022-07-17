@@ -30,7 +30,7 @@ const List = ({ places, childClicked, isLoading }) => {
   return (
     <div className={classes.container}>
       <Typography variant="h4">
-        Restaurants, Hotels and Attraction around you
+        Restaurants, Hotels and Attractions around you
       </Typography>
       {isLoading ? (
         <div className={classes.loading}>
