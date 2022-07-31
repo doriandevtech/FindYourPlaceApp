@@ -15,6 +15,8 @@ const App = () => {
   const [bounds, setBounds] = useState({});
 
   const [isLoading, setIsLoading] = useState(false);
+  const [type, setType] = useState("restaurants");
+  const [rating, setRating] = useState("");
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -26,11 +28,14 @@ const App = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    getPlacesData(bounds.sw, bounds.ne).then((data) => {
+
+    getPlacesData(type, bounds.sw, bounds.ne).then((data) => {
       setPlaces(data);
       setIsLoading(false);
+
+      console.log(type);
     });
-  }, [coordinates, bounds]);
+  }, [type, coordinates, bounds]);
 
   return (
     <>
