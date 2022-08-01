@@ -1,36 +1,49 @@
 import React from "react";
-import { AutoComplete } from '@react-google-maps/api';
-import { AppBar, Toolbar, Typography, InputBase, Box } from '@material-ui/core';
-import SearchIcon from '@material-ui/icons/Search';
+import { Autocomplete } from "@react-google-maps/api";
+import { AppBar, Toolbar, Typography, InputBase, Box } from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
+import { useState } from "react";
 
-import useStyles from './styles';
+import useStyles from "./styles";
 
+const Header = ({ setCoordinates }) => {
+  const classes = useStyles();
+  const [autoComplete, setAutoComplete] = useState(null);
 
-const Header = () => {
-    const classes = useStyles();
+  const onLoad = (autoC) => setAutoComplete(autoC);
 
-    return (
-        <AppBar position="static">
-            <Toolbar className={classes.toolbar}>
-                <Typography variant="h5" className={classes.title}>
-                    Travel Advisor
-                </Typography>
-                <Box display="flex">
-                    <Typography variant="h6" className={classes.title}>
-                        Explore new places
-                    </Typography>
-                    {/* <AutoComplete> */}
-                        <div className={classes.search}>
-                            <div className={classes.searchIcon}>
-                                <SearchIcon />
-                            </div>
-                            <InputBase placeholder="Search..." classes={{ root: classes.inputRoot, input: classes.inputInput }} />
-                        </div>
-                    {/* </AutoComplete> */}
-                </Box>
-            </Toolbar>
-        </AppBar>
-    );
-}
+  const onPlaceChanged = () => {
+    const lat = autoComplete.getPlace().geometry.location.lat();
+    const lng = autoComplete.getPlace().geometry.location.lng();
+
+    setCoordinates({ lat, lng });
+  };
+
+  return (
+    <AppBar position="static">
+      <Toolbar className={classes.toolbar}>
+        <Typography variant="h5" className={classes.title}>
+          Travel Advisor
+        </Typography>
+        <Box display="flex">
+          <Typography variant="h6" className={classes.title}>
+            Explore new places
+          </Typography>
+          <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search..."
+                classes={{ root: classes.inputRoot, input: classes.inputInput }}
+              />
+            </div>
+          </Autocomplete>
+        </Box>
+      </Toolbar>
+    </AppBar>
+  );
+};
 
 export default Header;
