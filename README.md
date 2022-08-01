@@ -19,14 +19,22 @@ Here is a screenshot of the actual app's current state :
 The following stack is used in this project :
 
 For UI development: 🔨
+
 - React: 17.0.2 ⚛️
 - Classnames: 2.3.1
 
 For API calls: 📞🗺
+
 - Axios: 0.26.0
 - React-Google-Maps/Api: 2.7.0
 
+APIs used:
+
+- Maps JavaScript API - for loading maps 🗺
+- Places API - for searching places 🔦
+
 For design: 👨🏻‍🎨
+
 - Material UI: 4.12.3
 
 ## What is the vision of the 🔍 Google-Maps clone 🗺 project ?
@@ -35,4 +43,4 @@ This project has gave me the opportunity to test my React skills as well as my a
 
 ## At what stage is the project right now ?
 
-I am currently working on the development on `refs` related to each restaurant which will show the restaurants card when it is clicked on the map.
+Yhe app is finally done 🥳. You can now search for restaurants, hotels and attractions all around the world 🌍
