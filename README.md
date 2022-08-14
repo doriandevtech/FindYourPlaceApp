@@ -14,10 +14,6 @@ Here is a screenshot of the actual app's current state :
 
 ![Travel Advisor - Google Maps clone Project - home page](https://user-images.githubusercontent.com/61510923/155578633-bd5a87ad-bf11-4db9-8a55-dcfa9fc09666.png)
 
-## How to use this app ?
-
-Here is the URL to the app : https://thetraveladvisorapp.netlify.com
-
 ## Which stack had been used ?
 
 The following stack is used in this project :
