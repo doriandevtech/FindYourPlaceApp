@@ -2,7 +2,7 @@
 
 ## What is the outcome of this project ?
 
-The goal of this sproject is to let you search for :
+The goal of this project is to let you search for :
 
 - Restaurants
 - Hotels
