@@ -14,6 +14,10 @@ Here is a screenshot of the actual app's current state :
 
 ![Travel Advisor - Google Maps clone Project - home page](https://user-images.githubusercontent.com/61510923/155578633-bd5a87ad-bf11-4db9-8a55-dcfa9fc09666.png)
 
+## How to use this app ?
+
+Here is the URL to the app : https://thetraveladvisorapp.com
+
 ## Which stack had been used ?
 
 The following stack is used in this project :
@@ -43,4 +47,4 @@ This project has gave me the opportunity to test my React skills as well as my a
 
 ## At what stage is the project right now ?
 
-Yhe app is finally done 🥳. You can now search for restaurants, hotels and attractions all around the world 🌍
+The app is finally done 🥳. You can now search for restaurants, hotels and attractions all around the world 🌍
