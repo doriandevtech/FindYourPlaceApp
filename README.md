@@ -16,7 +16,7 @@ Here is a screenshot of the actual app's current state :
 
 ## How to use this app ?
 
-Here is the URL to the app : https://thetraveladvisorapp.com
+Here is the URL to the app : https://thetraveladvisorapp.netlify.com
 
 ## Which stack had been used ?
 
